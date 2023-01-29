@@ -49,6 +49,20 @@ def del_contact():
         del contact[key]
     else:
         print("Maaf" +key+ "tidak ada di kontak anda")
+#penambahan display kontak
+def display_contact():
+    global contact
+    print(contact)
+#penambahan update kontak
+def update_contact():
+    global contact
+    title("Update Contact")
+    key = input("Name : ")
+    if isKey(key):
+        nohp = input("No Hp : ")
+        contact[key] = nohp
+    else:
+        print("Maaf" +key+ "tidak ada di kontak anda")
 #ini adalah penambahan sort
 def sort_contact():
     global contact
