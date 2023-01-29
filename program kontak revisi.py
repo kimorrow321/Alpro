@@ -23,3 +23,21 @@ def menu():
     print("0. Exit")
     choose = int(input("Choose : "))
     return choose
+
+def isKey(key):
+    global contact
+    if key in contact.keys():
+        return True
+    else:
+        return False
+#ini adalah opsi untuk menambahkan kontak yang ingin di tambahkan
+def add_contact():
+    global contact
+    title("Add Contact")
+    name = input("Nama  : ")
+    nohp = input("No Hp : ")
+    if not isKey(name):
+        contact[name] = nohp
+    else:
+        print("Sorry your name was here")
+    
