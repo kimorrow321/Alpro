@@ -72,3 +72,28 @@ def load_contact():
         key, value = line.split(",")
         contact[key] = value
     file.close()
+#penambahan fungsi menu
+def main():
+    i = -1
+    while i != 0:
+        i = menu()
+        clsr()
+        if i == 1:
+            add_contact()
+        elif i == 2:
+            del_contact()
+        elif i == 3:
+            display_contact()
+        elif i == 4:
+            update_contact()
+        elif i == 5:
+            sort_contact()
+        elif i == 6:
+            save_contact()
+        elif i == 7:
+            load_contact()
+        else:
+            print("Terimakasih telah menggunakan program ini!")  
+            
+if __name__ == "__main__":
+    main()
