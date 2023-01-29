@@ -63,3 +63,12 @@ def save_contact():
     for key, value in contact.items():
         file.write(key + "," + value + "\n")
     file.close()
+#ini penambahan load kontak
+def load_contact():
+    global contact
+    title("Load Contact")
+    file = open("contact.txt", "r")
+    for line in file:
+        key, value = line.split(",")
+        contact[key] = value
+    file.close()
