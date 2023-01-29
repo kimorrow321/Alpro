@@ -40,4 +40,12 @@ def add_contact():
         contact[name] = nohp
     else:
         print("Sorry your name was here")
-    
+#ini adalah menghapus kontak
+def del_contact():
+    global contact
+    title("Delete Contact")
+    key = input("Name : ")
+    if isKey(key=key):
+        del contact[key]
+    else:
+        print("Maaf" +key+ "tidak ada di kontak anda")
