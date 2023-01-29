@@ -55,3 +55,11 @@ def sort_contact():
     title("Sort Contact")
     sort_contact = sorted(contact.items(), key=lambda x: x[0])
     print(sort_contact)
+#ini penambahan save kontak
+def save_contact():
+    global contact
+    title("Save Contact")
+    file = open("contact.txt", "w")
+    for key, value in contact.items():
+        file.write(key + "," + value + "\n")
+    file.close()
