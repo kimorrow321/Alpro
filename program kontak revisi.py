@@ -49,3 +49,9 @@ def del_contact():
         del contact[key]
     else:
         print("Maaf" +key+ "tidak ada di kontak anda")
+#ini adalah penambahan sort
+def sort_contact():
+    global contact
+    title("Sort Contact")
+    sort_contact = sorted(contact.items(), key=lambda x: x[0])
+    print(sort_contact)
