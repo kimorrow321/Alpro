@@ -4,13 +4,13 @@ contact={}
 def clsr():
     os.system("pause")
     os.system("cls")
-#ini adalah tampilan menu
+#ini adalah tampilan judul kontak
 def title(args):
     print("=============================")
     print("        Contact Book")
     print("=============================")
     print(">> " + args)
-
+#ini penambahan menu
 def menu():
     title("Menu")
     print("1. Add Contact")
@@ -25,7 +25,7 @@ def menu():
     return choose
 
 def isKey(key):
-    global contact
+    global contact #untuk deklarasi variabel secara menyeluruh
     if key in contact.keys():
         return True
     else:
@@ -40,7 +40,7 @@ def add_contact():
         contact[name] = nohp
     else:
         print("Sorry your name was here")
-#ini adalah menghapus kontak
+#ini berfungsi untuk menghapus kontak 
 def del_contact():
     global contact
     title("Delete Contact")
@@ -49,11 +49,11 @@ def del_contact():
         del contact[key]
     else:
         print("Maaf" +key+ "tidak ada di kontak anda")
-#penambahan display kontak
+#ini penambahan display kontak
 def display_contact():
     global contact
     print(contact)
-#penambahan update kontak
+#ini penambahan update kontak
 def update_contact():
     global contact
     title("Update Contact")
@@ -86,7 +86,7 @@ def load_contact():
         key, value = line.split(",")
         contact[key] = value
     file.close()
-#penambahan fungsi menu
+#ini untuk penambahan fungsi menu
 def main():
     i = -1
     while i != 0:
